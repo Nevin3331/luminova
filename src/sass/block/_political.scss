@@ -1,0 +1,17 @@
+.political {
+    background: #010101;
+    padding: 200px 0;
+    &_title {
+        margin: 60px 0 0 0;
+        color: #EEE;
+        font-size: 54px;
+        font-weight: 600;
+    }
+    &_text {
+        margin-top: 41px;
+        color: #868997;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}

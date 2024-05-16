@@ -1,0 +1,19 @@
+.review {
+    padding: 101px 0 91px 0;
+    background: #000;
+    &_title {
+        color: #EEE;
+        font-size: 54px;
+        font-weight: 600;
+    }
+    &_carousel {
+        margin-top: 70px;
+        padding: 0 60px;
+    }
+}
+.slick-slide {
+    img {
+        display: flex;
+        gap: 10px;
+    }
+}

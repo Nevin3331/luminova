@@ -1,0 +1,21 @@
+.advantages {
+    &_wrapper {
+        margin-top: 192px;
+        padding: 28px 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(238, 238, 238, 0.10);
+        background: rgba(0, 0, 0, 0.52);
+        backdrop-filter: blur(15px);
+        display: flex;
+        justify-content: space-between;
+        &_item {
+            display: flex;
+            align-items: center;
+            &_descr {
+                color: #EEE;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}

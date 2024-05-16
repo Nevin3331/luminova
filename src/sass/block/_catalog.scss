@@ -1,0 +1,17 @@
+.catalog {
+    padding: 142px 0;
+    background: #010101;
+    &_filter {
+        padding: 14px;
+    }
+}
+.bg-dark {
+    margin-top: 50px;
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 364px;
+    border-radius: 10px;
+    background: #161719;
+}
