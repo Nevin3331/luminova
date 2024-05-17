@@ -334,6 +334,20 @@ header {
   transition: all 0.3s ease;
 }
 
+.main_hover:hover .main_hover_icon > svg > path {
+  fill: #EEE !important;
+}
+
+.main_hover_icon > svg {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main_hover:hover .main_hover_icon > svg {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .main_hover_sociale_first.col-sm-3:hover {
   padding: 10px;
   border-radius: 8px;
@@ -430,13 +444,15 @@ header {
   display: -ms-flexbox;
   display: flex;
   padding: 30px 26px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 685px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -552,6 +568,10 @@ header {
 }
 
 .product_wrapper_item.active {
+  height: auto;
+}
+
+.product_wrapper_item.active .product_wrapper_item_footer {
   display: block;
   opacity: 1;
 }
@@ -805,6 +825,14 @@ header {
   background: #010101;
   border-radius: 10px;
   border: none;
+}
+
+.review .slick-prev::before {
+  content: url(../../icons/arrow_left.svg);
+}
+
+.review .slick-next:before {
+  content: url(../../icons/arrow_left.svg);
 }
 
 .service {

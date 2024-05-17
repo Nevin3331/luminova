@@ -26,3 +26,9 @@
     border: none;
     
 }
+.review .slick-prev::before {
+    content: url(../../icons/arrow_left.svg);
+}
+.review .slick-next:before {
+    content: url(../../icons/arrow_left.svg);   
+}
