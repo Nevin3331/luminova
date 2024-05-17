@@ -8,11 +8,11 @@
         font-weight: 600;
     }
     &_wrapper {
-        margin-top: 81px;
+        margin-top: 81px !important;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 41px 70px;
+        padding: 41px 70px !important;
         align-items: center;
         gap: 10px;
         border-radius: 20px;
