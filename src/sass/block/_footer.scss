@@ -7,6 +7,7 @@ footer {
         justify-content: space-between;
         &_nav {
             &_title {
+                font-family: Montserrat;
                 color: #EEE;
                 font-size: 24px;
                 font-weight: 500;
@@ -19,6 +20,7 @@ footer {
                 }
             }
             &_link { 
+                font-family: Montserrat;
                 color: #868997;
                 font-size: 14px;
                 font-weight: 400;
@@ -28,6 +30,7 @@ footer {
         }
         &_wrapper {
             &_title {
+                font-family: Montserrat;
                 color: #EEE;
                 font-size: 24px;
                 font-weight: 500;
@@ -42,11 +45,13 @@ footer {
             display: flex;
             flex-direction: column;
             &_title {
+                font-family: Montserrat;
                 color: #EEE;
                 font-size: 24px;
                 font-weight: 500;
             }
             &_button {
+                font-family: Montserrat;
                 margin-top: 26px;
                 display: flex;
                 width: 100%;
@@ -67,6 +72,7 @@ footer {
                     align-items: center;
                     gap: 12px;
                     a {
+                        font-family: Montserrat;
                         color: #868997;
                         font-size: 14px;
                         font-weight: 400;
@@ -84,6 +90,7 @@ footer {
     }
 }
 .copyright {    
+    font-family: Montserrat;
     font-size: 12px;
     font-weight: 500;
     a {
@@ -91,6 +98,7 @@ footer {
     }
 }
 .luminova {
+    font-family: Montserrat;
     color: #868997;
     font-size: 12px;
     font-weight: 500;

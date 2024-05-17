@@ -21,6 +21,7 @@
     }
     &_head {
         &_title {
+            font-family: Manrope;
             color: #EEE;
             font-size: 54px;
             font-weight: 600;
@@ -75,6 +76,7 @@
             background: none;
         }
         h4 {
+            font-family: Montserrat;
             padding: 30px;
             margin: 0;
             color: #EEE;
@@ -126,7 +128,7 @@
     } 
 }
 .accordion-button::after {
-    background-image: url(../../icons/accordion_arrow.png) !important;
+    background-image: url(../src/icons/accordion_arrow.png) !important;
     width: 80px !important;
     height: 80px;
     background-size: cover;

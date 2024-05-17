@@ -1,7 +1,5 @@
 @charset "UTF-8";
 * {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Orbitron", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -199,30 +197,33 @@ header {
 }
 
 .main {
-  background-image: url(../../../src/img/main_bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 265px 0 192px 0;
 }
 .main_title {
+  font-family: Manrope;
   font-size: 120px;
   font-weight: 600;
   color: #EDEDED;
 }
 .main_title span {
+  font-family: Manrope;
   background: -webkit-gradient(linear, left top, right top, from(rgb(0, 71, 255)), to(rgb(0, 224, 255)));
   background: linear-gradient(90deg, rgb(0, 71, 255), rgb(0, 224, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .main_subtitle {
+  font-family: Montserrat;
   margin-top: 30px;
   padding: 0 !important;
   font-size: 31px;
   color: #EEEEEE;
 }
 .main_hover {
+  font-family: Montserrat;
   margin-top: 50px !important;
   padding: 5px 0;
   display: -webkit-box;
@@ -275,6 +276,7 @@ header {
   z-index: 9998;
 }
 .main_hover_sociale_second {
+  font-family: Montserrat;
   padding: 10px;
   margin-top: 38px !important;
   padding: 5px 0;
@@ -386,6 +388,7 @@ header {
           align-items: center;
 }
 .advantages_wrapper_item_descr {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 20px;
   font-weight: 400;
@@ -396,6 +399,7 @@ header {
   background: #010101;
 }
 .product_title {
+  font-family: Manrope;
   color: #EDEDED;
   font-size: 54px;
   font-style: normal;
@@ -415,12 +419,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 .product_wrapper_item {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,14 +444,17 @@ header {
   border: 1px solid rgba(238, 238, 238, 0.1);
   background: -webkit-gradient(linear, left top, left bottom, from(#010101), to(#0D0E1B));
   background: linear-gradient(180deg, #010101 0%, #0D0E1B 100%);
+  margin-bottom: 234px;
 }
 .product_wrapper_item_title {
+  font-family: Montserrat;
   color: #EEE;
   text-align: center;
   font-size: 24px;
   font-weight: 500;
 }
 .product_wrapper_item_cost {
+  font-family: Montserrat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,6 +471,7 @@ header {
   background: #151620;
 }
 .product_wrapper_item_cost_old {
+  font-family: Montserrat;
   color: #7D7D7D;
   text-align: center;
   font-size: 18px;
@@ -470,6 +479,7 @@ header {
   text-decoration: line-through;
 }
 .product_wrapper_item_cost_new {
+  font-family: Montserrat;
   background: -webkit-gradient(linear, left top, right top, from(rgb(0, 71, 255)), to(rgb(0, 224, 255)));
   background: linear-gradient(90deg, rgb(0, 71, 255), rgb(0, 224, 255));
   -webkit-background-clip: text;
@@ -479,6 +489,7 @@ header {
   font-weight: 600;
 }
 .product_wrapper_item_button {
+  font-family: Montserrat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,17 +508,23 @@ header {
   color: #EEE;
   font-size: 20px;
   font-weight: 500;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.product_wrapper_item_button_link {
+  width: 100%;
 }
 .product_wrapper_item_footer {
+  display: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
 .product_wrapper_item_footer_line {
   border: 1px solid #222;
 }
 .product_wrapper_item_footer_text {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 16px;
   font-weight: 500;
@@ -518,9 +535,25 @@ header {
   margin-top: 260px;
 }
 
-.product_wrapper_item_footer.active {
+.product_wrapper_item_button:hover {
+  background: linear-gradient(107deg, #00E0FF -4.83%, #0047FF 100.71%);
+}
+
+.product_wrapper_item_button img {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.product_wrapper_item_button:hover img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.product_wrapper_item.active {
+  display: block;
   opacity: 1;
-  pointer-events: auto; /* Возвращаем взаимодействие с курсором при активации */
 }
 
 .about {
@@ -528,6 +561,7 @@ header {
   background: #000;
 }
 .about_title {
+  font-family: Manrope;
   color: #EDEDED;
   font-size: 54px;
   font-weight: 600;
@@ -561,6 +595,7 @@ header {
           align-items: center;
 }
 .about_wrapper_item_number {
+  font-family: Manrope;
   font-size: 118px;
   font-weight: 400;
   background: -webkit-gradient(linear, left top, right top, from(rgb(0, 71, 255)), to(rgb(0, 224, 255)));
@@ -570,6 +605,7 @@ header {
   margin-right: 10px;
 }
 .about_wrapper_item_descr {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 20px;
   font-weight: 400;
@@ -592,6 +628,7 @@ header {
   background: radial-gradient(106.42% 50% at 50% 50%, #0D0E1B 0%, #010101 100%);
 }
 .about_left_title {
+  font-family: Montserrat;
   font-size: 36px;
   font-weight: 500;
   background: -webkit-gradient(linear, left top, right top, from(rgb(0, 102, 255)), to(rgb(0, 224, 255)));
@@ -600,6 +637,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 .about_left_item {
+  font-family: Montserrat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,6 +659,7 @@ header {
   margin-top: 62px;
 }
 .about_right_first {
+  font-family: Montserrat;
   max-height: 534px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -636,6 +675,7 @@ header {
   background: radial-gradient(106.42% 50% at 50% 50%, #0D0E1B 0%, #010101 100%);
 }
 .about_right_title {
+  font-family: Montserrat;
   font-size: 36px;
   font-weight: 500;
   background: -webkit-gradient(linear, left top, right top, from(rgb(0, 102, 255)), to(rgb(0, 224, 255)));
@@ -644,6 +684,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 .about_right_item {
+  font-family: Montserrat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -687,17 +728,20 @@ header {
   background: linear-gradient(336deg, #05050A 1.84%, #0D0E1B 88.18%);
 }
 .video_title {
+  font-family: Manrope;
   color: #EEE;
   font-size: 54px;
   font-weight: 600;
 }
 .video_subtitle {
+  font-family: Montserrat;
   margin-top: 50px;
   color: #EEE;
   font-size: 24px;
   font-weight: 500;
 }
 .video_text {
+  font-family: Montserrat;
   margin-top: 30px;
   color: #868997;
   font-size: 18px;
@@ -738,6 +782,7 @@ header {
   background: #000;
 }
 .review_title {
+  font-family: Manrope;
   color: #EEE;
   font-size: 54px;
   font-weight: 600;
@@ -784,6 +829,7 @@ header {
           transform: translate(-50%);
 }
 .service_head_title {
+  font-family: Manrope;
   color: #EEE;
   font-size: 54px;
   font-weight: 600;
@@ -851,6 +897,7 @@ header {
   background: none;
 }
 .service .accordion h4 {
+  font-family: Montserrat;
   padding: 30px;
   margin: 0;
   color: #EEE;
@@ -907,7 +954,7 @@ header {
 }
 
 .accordion-button::after {
-  background-image: url(/src/icons/accordion_arrow.png) !important;
+  background-image: url(../src/icons/accordion_arrow.png) !important;
   width: 80px !important;
   height: 80px;
   background-size: cover;
@@ -920,7 +967,7 @@ header {
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url(/src/icons/accordion_arrow_drop.png) !important;
+  background-image: url(../src/icons/accordion_arrow_drop.png) !important;
 }
 
 .certification {
@@ -928,6 +975,7 @@ header {
   padding: 50px 0;
 }
 .certification_title {
+  font-family: Manrope;
   color: #EEE;
   font-size: 54px;
   font-weight: 600;
@@ -936,12 +984,14 @@ header {
   margin-top: 60px;
 }
 .certification_descr_subtitle {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 24px;
   font-weight: 500;
   line-height: 150%;
 }
 .certification_descr_text {
+  font-family: Montserrat;
   color: #868997;
   font-size: 18px;
   font-weight: 400;
@@ -969,6 +1019,7 @@ footer .footer_contacts {
           justify-content: space-between;
 }
 footer .footer_contacts_nav_title {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 24px;
   font-weight: 500;
@@ -985,6 +1036,7 @@ footer .footer_contacts_nav_list_wrapper {
           justify-content: space-between;
 }
 footer .footer_contacts_nav_link {
+  font-family: Montserrat;
   color: #868997;
   font-size: 14px;
   font-weight: 400;
@@ -992,6 +1044,7 @@ footer .footer_contacts_nav_link {
   margin-top: 20px;
 }
 footer .footer_contacts_wrapper_title {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 24px;
   font-weight: 500;
@@ -1013,11 +1066,13 @@ footer .footer_contacts_contaction {
           flex-direction: column;
 }
 footer .footer_contacts_contaction_title {
+  font-family: Montserrat;
   color: #EEE;
   font-size: 24px;
   font-weight: 500;
 }
 footer .footer_contacts_contaction_button {
+  font-family: Montserrat;
   margin-top: 26px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1049,6 +1104,7 @@ footer .footer_contacts_contaction_connect_item {
   gap: 12px;
 }
 footer .footer_contacts_contaction_connect_item a {
+  font-family: Montserrat;
   color: #868997;
   font-size: 14px;
   font-weight: 400;
@@ -1063,6 +1119,7 @@ footer .footer_contacts_contaction_connect_item a {
 }
 
 .copyright {
+  font-family: Montserrat;
   font-size: 12px;
   font-weight: 500;
 }
@@ -1071,6 +1128,7 @@ footer .footer_contacts_contaction_connect_item a {
 }
 
 .luminova {
+  font-family: Montserrat;
   color: #868997;
   font-size: 12px;
   font-weight: 500;
@@ -1095,7 +1153,7 @@ footer .footer_contacts_contaction_connect_item a {
 }
 
 .catalog {
-  padding: 142px 0;
+  padding: 142px 0 0 0;
   background: #010101;
 }
 .catalog_filter {

@@ -2,6 +2,7 @@
     background: #000;
     padding: 50px 0;
     &_title {
+        font-family: Manrope;
         color: #EEE;
         font-size: 54px;
         font-weight: 600;
@@ -9,12 +10,14 @@
     &_descr {
         margin-top: 60px;
         &_subtitle {
+            font-family: Montserrat;
             color: #EEE;
             font-size: 24px;
             font-weight: 500;
             line-height: 150%;
         }
         &_text {
+            font-family: Montserrat;
             color: #868997;
             font-size: 18px;
             font-weight: 400;

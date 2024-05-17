@@ -3,17 +3,20 @@
     border: 2px solid rgba(238, 238, 238, 0.10);
     background: linear-gradient(336deg, #05050A 1.84%, #0D0E1B 88.18%);
     &_title {
+        font-family: Manrope;
         color: #EEE;
         font-size: 54px;
         font-weight: 600;
     }
     &_subtitle {
+        font-family: Montserrat;
         margin-top: 50px;
         color: #EEE;
         font-size: 24px;
         font-weight: 500;
     }
     &_text {
+        font-family: Montserrat;
         margin-top: 30px;
         color: #868997;
         font-size: 18px;

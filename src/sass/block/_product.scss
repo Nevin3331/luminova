@@ -2,6 +2,7 @@
     padding: 200px 0;
     background: #010101;
     &_title {
+        font-family: Manrope;
         color: #EDEDED;
         font-size: 54px;
         font-style: normal;
@@ -19,9 +20,9 @@
     &_wrapper {
         margin-top: 58px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         &_item {
-            position: relative;
             display: flex;
             padding: 30px 26px;
             flex-direction: column;
@@ -31,14 +32,16 @@
             border-radius: 20px;
             border: 1px solid rgba(238, 238, 238, 0.10);
             background: linear-gradient(180deg, #010101 0%, #0D0E1B 100%);
-            
+            margin-bottom: 234px;
             &_title {
+                font-family: Montserrat;
                 color: #EEE;
                 text-align: center;
                 font-size: 24px;
                 font-weight: 500;
             }
             &_cost {
+                font-family: Montserrat;
                 display: flex;
                 width: 100%;
                 padding: 20px 0px;
@@ -48,6 +51,7 @@
                 border-radius: 10px;
                 background: #151620;
                 &_old {
+                    font-family: Montserrat;
                     color: #7D7D7D;
                     text-align: center;
                     font-size: 18px;
@@ -55,6 +59,7 @@
                     text-decoration: line-through;
                 }
                 &_new {
+                    font-family: Montserrat;
                     background: linear-gradient(90deg, rgba(0, 71, 255, 1), rgba(0, 224, 255, 1));
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;          
@@ -64,6 +69,7 @@
                 }
             }
             &_button {
+                font-family: Montserrat;
                 display: flex;
                 width: 100%;
                 padding: 15px 16px 15px 38px;
@@ -76,16 +82,22 @@
                 color: #EEE;
                 font-size: 20px;
                 font-weight: 500;
+                transition: all 0.3s ease;
+                &_link {
+                    width: 100%;
+                }
             }
+
             &_footer {
-                
+                display: none;
                 opacity: 0;
                 transition: opacity 0.3s ease;
-                pointer-events: none;          
+       
                 &_line {
                     border: 1px solid #222;
                 }
                 &_text {
+                    font-family: Montserrat;
                     color: #EEE;
                     font-size: 16px;
                     font-weight: 500;
@@ -98,8 +110,18 @@
 .second {
     margin-top: 260px;
 }
+.product_wrapper_item_button:hover {
+    background: linear-gradient(107deg, #00E0FF -4.83%, #0047FF 100.71%);
+}
 
-.product_wrapper_item_footer.active {
+.product_wrapper_item_button img {
+    transition: transform 0.3s ease;
+}
+.product_wrapper_item_button:hover img {
+    transform: rotate(-90deg);
+}
+
+.product_wrapper_item.active {
+    display: block;
     opacity: 1;
-    pointer-events: auto; /* Возвращаем взаимодействие с курсором при активации */
 }

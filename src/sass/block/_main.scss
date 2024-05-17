@@ -1,26 +1,30 @@
 .main {
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 265px 0 192px 0;
     &_title {
+        font-family: Manrope;
         font-size: 120px;
         font-weight: 600;
         color: #EDEDED;
         span {
+            font-family: Manrope;
+
             background: linear-gradient(90deg, rgba(0, 71, 255, 1), rgba(0, 224, 255, 1));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
         }
     }
     &_subtitle {
+        font-family: Montserrat;
         margin-top: 30px;
         padding: 0 !important;
         font-size: 31px;
         color: #EEEEEE;
     }
     &_hover {
+        font-family: Montserrat;
         margin-top: 50px !important;
         padding: 5px 0;
         display: flex;
@@ -58,6 +62,7 @@
                 }
             }
             &_second {
+                font-family: Montserrat;
                 padding: 10px;
                 margin-top: 38px !important;
                 padding: 5px 0;
