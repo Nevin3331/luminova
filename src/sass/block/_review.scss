@@ -27,8 +27,8 @@
     
 }
 .review .slick-prev::before {
-    content: url(../../icons/arrow_left.svg);
+    content: url(../src/icons/arrow_left.svg);
 }
 .review .slick-next:before {
-    content: url(../../icons/arrow_left.svg);   
+    content: url(../src/icons/arrow_right.svg);   
 }

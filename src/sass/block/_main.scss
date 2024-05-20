@@ -29,13 +29,16 @@
         padding: 5px 0;
         display: flex;
         justify-content: space-between;
-        color: #EEEEEE;
+        
         font-size: 32px;
         background-image: linear-gradient(to right, #0047FF 0%, #00E0FF 100%);
         background-repeat: no-repeat;
         background-size: 100% 2px;
         background-position: 0 bottom;
         transition: all 0.3s ease;
+        a {
+            color: #EEEEEE;
+        }
         p {
             margin: 0;
             z-index: 9998;
@@ -129,7 +132,6 @@
     box-shadow: 0px 0px 13.4px 0px rgba(74, 196, 89, 0.44);
     transition: all 0.3s ease;
     flex-grow: 1;
-    font-size: 24px;
 }
 .main_hover_sociale_second.col-sm-3:hover {
     padding: 10px;
@@ -139,5 +141,5 @@
     box-shadow: 0px 0px 13.4px 0px rgba(3, 155, 229, 0.44);
     transition: all 0.3s ease;
     flex-grow: 1;
-    font-size: 24px;
+    
 }

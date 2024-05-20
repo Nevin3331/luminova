@@ -147,5 +147,22 @@ header {
     cursor: pointer;
 }
 .menu_laptop.active {
-    left: 0; /* меняем положение при активации */
+    left: 0;
+}
+
+.breadcrumb {
+    align-items: flex-end;
+}
+.breadcrumb-item a {
+    color:#868997;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.breadcrumb-item.active {
+    background: linear-gradient(107deg, #0047FF -4.83%, #00E0FF 100.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Montserrat;
+    font-size: 14px;
 }

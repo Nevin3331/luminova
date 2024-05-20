@@ -1,0 +1,251 @@
+.delivery {
+    background:#010101;
+    padding: 200px 0;
+    &_title {
+        color:#EEE;
+        font-family: Manrope;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &_subtitle {
+        margin-top: 40px;
+        color: #EEE;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &_name {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 30px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        background: #161719;
+        color: #868997;
+
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        input {
+            width: 100%;
+            color: #EEE;
+            background: none;
+            border: none;
+            outline: none;
+        }
+        &_phone {
+            display: flex;
+            width: 100%;
+            input {
+                margin-left: 10px;
+            }
+        }
+    }
+    &_localation {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        &_house, &_rooms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &_text {
+        display: flex;
+        flex-direction: column;
+    }
+    &_right {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 40px !important;
+        align-items: flex-start;
+        border-radius: 20px;
+        background: #161719;
+        &_head {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &_title {
+                color: #EEE;
+                font-family: Montserrat;
+                font-size: 34px;
+                font-style: normal;
+                font-weight: 500;
+            }
+            &_change {
+                color: #868997;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration-line: underline;
+                cursor: pointer;
+            }
+        }
+        &_body {
+            &_item {
+                margin-top: 40px;
+                display: flex;
+                justify-content: space-between;
+                &_name {
+                    color: #EEE;
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+                &_size {                
+                    color: #868997;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                &_quantity {
+                    color: #EEE;
+                    text-align: center;
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+                &_cost {
+                    color: #EEE;
+                    text-align: center;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+        &_footer {
+            width: 100%;
+            &_line {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 44px;
+                &_text {
+                    color: #868997;
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                &_info {
+                    color: #EEE;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                &_high {
+                    color: #EEE;
+                    font-family: Manrope;
+                    font-size: 54px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+        &_button {
+            &_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 30px;
+                font-size: 20px;
+                color: #EEE;
+                border-radius: 3px;
+                text-align: center;
+                border-radius: 10px;
+                background: #0047FF;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            &_descr {
+                margin-top: 20px;
+                color: #868997;
+                text-align: center;
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+.label_first {
+    margin-top: 63px;
+    color: #EEE;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.label_second {
+    margin-top: 30px;
+    color: #EEE;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.form-check-label {
+    color: #EEE;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form-check-inline {
+    margin-top: 21px;
+}
+
+.form-control {
+    margin-top: 20px;
+    border-radius: 10px !important;
+    background-color:#161719 !important;
+    border: none !important;
+    padding: 20px 10px 20px 30px !important;
+    box-shadow: none !important;
+    color: #EEE !important;
+}
+textarea {
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    background:#161719;
+    outline: none;
+    color: #EEE;
+}
+
+.delivery_right_button_btn:hover {
+    background: linear-gradient(107deg, #0047FF -4.83%, #00E0FF 100.71%);
+    box-shadow: 0px 0px 13.4px 0px rgba(0, 148, 255, 0.44);
+}

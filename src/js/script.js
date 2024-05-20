@@ -52,17 +52,32 @@ document.addEventListener('DOMContentLoaded', function() {
 //Shopping cart
 var el;
 
-$("tr").each(function() {
-  var subtotal = parseFloat($(this).children(".price").text().replace("$",""));
-  var amount = parseFloat($(this).children(".amount").children("input").val());
-  $(this).children(".pricesubtotal").text("$"+
-  (Math.round(
-    subtotal*amount*100
-  )/100).toFixed(2));
-});
+// Обновление суммы при изменении количества или удалении товара
+function updateSubtotal() {
+  $("tr").each(function() {
+    var subtotal = parseFloat($(this).children(".price").text().replace("$",""));
+    var amount = parseFloat($(this).children(".amount").children("input").val());
+    $(this).children(".pricesubtotal").text("$" + (Math.round(subtotal * amount * 100) / 100).toFixed(2));
+  });
+  changed();
+}
 
-$(".amount > input").bind("change keyup", function() {
-  if (parseFloat($(this).val())<1) {
+// Функция для обработки изменений
+function changed() {
+  var subtotal = 0;
+  $(".p").each(function() {
+    subtotal = subtotal + parseFloat($(this).children(".pricesubtotal").text().replace("$",""));
+  });
+  $(".totalpricesubtotal").text("$" + (Math.round(subtotal * 100) / 100).toFixed(2));
+  var a = (subtotal / 100 * 105) + parseFloat($(".shipping").text());
+  var total = (Math.round(a * 100) / 100).toFixed(2);
+  $(".realtotal").text(total);
+  $(".taxval").text("($" + (Math.round(subtotal * 5) / 100).toFixed(2) + ") ");
+}
+
+// Обработчик события изменения поля ввода количества
+$(".amount > input").on("change keyup", function() {
+  if (parseFloat($(this).val()) < 1) {
     $(this).val(1);
     el = $(this).parents("td").parents("tr").children(".remove");
     el.addClass("hey");
@@ -70,38 +85,44 @@ $(".amount > input").bind("change keyup", function() {
       el.removeClass("hey");
     }, 200);
   }
-  var subtotal = parseFloat($(this).parents("td").parents("tr").children(".price").text().replace("$",""));
-  var amount = parseFloat($(this).parents("td").parents("tr").children(".amount").children("input").val());
-  $(this).parents("td").parents("tr").children(".pricesubtotal").text("$"+
-    (Math.round(
-      subtotal*amount*100
-    )/100).toFixed(2));
-  changed();
+  updateSubtotal();
 });
 
+// Обработчик события удаления товара
 $(".remove > div").click(function() {   
   $(this).parents("td").parents("tr").remove();
-  changed();
+  updateSubtotal();
 });
 
-function changed() {
-  var subtotal = 0;
-  $(".p").each(function() {
-    subtotal = subtotal + parseFloat($(this).children(".pricesubtotal").text().replace("$",""));
-  });
-  $(".totalpricesubtotal").text("$"+(Math.round(subtotal*100)/100).toFixed(2));
-  var a = (subtotal/100*105)+parseFloat($(".shipping").text())
-  var total = (Math.round(a*100)/100).toFixed(2);
-  $(".realtotal").text(total);
-  $(".taxval").text("($"+(Math.round(subtotal*5)/100).toFixed(2)+") ");
-}
-
+// Обработчик события при клике на кнопку "Checkout"
 $("#checkout").click(function() {
-  alert("And that's $"+$(".realtotal").text()+", please.");
+  alert("And that's $" + $(".realtotal").text() + ", please.");
 });
 
-changed();
+// Изначальное обновление суммы
+updateSubtotal();
 
+// Обработчик события при клике на кнопку "-"
+$(".qty-minus").click(function(event) {
+  event.preventDefault(); // Предотвращение автоматического скролла
+  var input = $(this).next("input");
+  var currentValue = parseFloat(input.val());
+  if (currentValue > 1) {
+    input.val(currentValue - 1);
+    updateSubtotal();
+  }
+});
+
+// Обработчик события при клике на кнопку "+"
+$(".qty-plus").click(function(event) {
+  event.preventDefault(); // Предотвращение автоматического скролла
+  var input = $(this).prev("input");
+  var currentValue = parseFloat(input.val());
+  input.val(currentValue + 1);
+  updateSubtotal();
+});
+
+// Обработчик события при клике на кнопку "expand"
 $("#expand").click(function() {
   $("#coolstuff").toggle();
 });

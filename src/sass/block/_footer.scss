@@ -64,6 +64,7 @@ footer {
                 color: #EEE;
                 font-size: 20px;
                 font-weight: 500;
+                
             }
             &_connect {
                 &_item {
@@ -102,4 +103,14 @@ footer {
     color: #868997;
     font-size: 12px;
     font-weight: 500;
+}
+
+footer .footer_contacts_contaction_button:hover {
+    background: linear-gradient(107deg, #00E0FF -4.83%, #0047FF 100.71%);
+}
+footer .footer_contacts_contaction_button img {
+    transition: transform 0.3s ease;
+}
+footer .footer_contacts_contaction_button:hover img {
+    transform: rotate(-90deg);
 }
